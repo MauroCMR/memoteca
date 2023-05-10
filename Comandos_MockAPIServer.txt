@@ -1,0 +1,7 @@
+Comandos para criar o Json Server - simulando uma API backend
+
+mkdir backend  
+ cd .\backend\   
+npm init -y     
+npm i json-server  
+npm start  
