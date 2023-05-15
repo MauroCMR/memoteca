@@ -5,3 +5,25 @@ mkdir backend
 npm init -y     
 npm i json-server  
 npm start  
+
+
+
+-------------- property binding -----------
+
+Marque as alternativas corretas de acordo com o uso do property binding:
+
+Alternativa correta
+<div class="card-perfil">
+    <p>{{usuario.nome}}</p>
+    <img src="{{usuario.imgPerfil}}" alt="Imagem de perfil">
+</div> 
+
+A interpolação é a incorporação de expressões em texto com o uso de chaves duplas como delimitadores.
+
+Alternativa correta
+<div class="card-perfil">
+    <p [textContent]="usuario.nome"></p>
+    <img [src]="usuario.imgPerfil" alt="Imagem de perfil">
+</div>
+
+A vinculação de propriedades ajuda a definir o valor de uma propriedade criada dentro do componente para uma propriedade de um elemento HTML. para isso basta colocar a propriedade entre colchetes e passar como valor a propriedade do componente.
