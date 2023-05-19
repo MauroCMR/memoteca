@@ -1,1 +1,3 @@
 ng g s componentes/pensamentos/pensamento
+
+ng g s componentes/pensamentos/listar-pensamento/botao-carregar-mais 

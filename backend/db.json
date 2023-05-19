@@ -47,6 +47,12 @@
       "autoria": "Alura",
       "modelo": "modelo1",
       "id": 8
+    },
+    {
+      "conteudo": "Pensamento numero 7!!!",
+      "autoria": "Nay",
+      "modelo": "modelo2",
+      "id": 9
     }
   ]
 }
