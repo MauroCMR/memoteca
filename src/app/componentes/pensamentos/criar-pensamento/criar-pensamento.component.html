@@ -11,6 +11,7 @@
        formControlName="conteudo"
        placeholder="Digite o pensamento"
      >
+
      <div class="mensagem__erro" 
       *ngIf="formulario.get('conteudo')?.errors && formulario.get('conteudo')?.touched">
         Pensamento é obrigatório"
@@ -24,6 +25,7 @@
         formControlName="autoria"
         placeholder="Digite a autoria ou fonte"
        >
+
       <div class="mensagem__erro"
        *ngIf="formulario.get('autoria')?.errors?.['required'] && formulario.get('autoria')?.touched">
          Autoria é obrigatória!"
@@ -44,34 +46,35 @@
     <div class="container-radio">
       <div class="radio-modelo">
         <label for="modelo1">
-        <input 
-          type="radio"
-          id="modelo1"
-          value="modelo1"
-          formControlName="modelo"
+         <input 
+           type="radio"
+           id="modelo1"
+           value="modelo1"
+           formControlName="modelo"
+         >
 
-        >
-        <div class="custom-radio">
-          <span></span>
-        </div>
-        <span>Modelo 1</span>
-      </label>
+         <div class="custom-radio">
+           <span></span>
+         </div>
+         <span>Modelo 1</span>
+        </label>
       Prévia:
       <div class="modelo modelo1 ff-roboto-mono">
          <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">
-         <p class="conteudo">{{ formulario.get('conteudo')?.value }}</p>            <!-- usado para property binding -->
+         <p class="conteudo">{{formulario.get('conteudo')?.value }}</p>            <!-- usado para property binding -->
          <p class="autoria"><b>{{formulario.get('autoria')?.value}}</b></p>       <!-- com interpolacao               -->
       </div>
    </div>
-   <div class="radio-modelo">
-    <label for="modelo2">
-    <input 
-      type="radio"
-      id="modelo2"
-      value="modelo2"
-      formControlName="modelo"
 
-    >
+   <div class="radio-modelo">
+        <label for="modelo2">
+        <input 
+          type="radio"
+          id="modelo2"
+          value="modelo2"
+          formControlName="modelo"
+        >
+
     <div class="custom-radio">
       <span></span>
     </div>
@@ -91,8 +94,8 @@
     id="modelo3"
     value="modelo3"
     formControlName="modelo"
-
   >
+  
   <div class="custom-radio">
     <span></span>
   </div>
@@ -107,7 +110,10 @@ Prévia:
 </div>
 
    <div class="acoes">
-    <button (click)="criarPensamento()"
+    <button 
+    [disabled]="!formulario.valid"
+    (click)="criarPensamento()"
+    [ngClass]="habilitarBotao()"
             class="botao">Salvar</button>               <!-- Event Binding --> 
 
     <button (click)="cancelar()"

@@ -10,7 +10,7 @@
       "id": 2,
       "conteudo": "Estudando Angular via Alura",
       "autoria": "Mauro",
-      "modelo": "modelo2"
+      "modelo": "modelo3"
     },
     {
       "id": 3,
@@ -20,9 +20,9 @@
     },
     {
       "id": 4,
-      "conteudo": "Angular é o melhor",
-      "autoria": "Mauro",
-      "modelo": "modelo1"
+      "conteudo": "Frase   ",
+      "autoria": "xxx",
+      "modelo": "modelo3"
     },
     {
       "conteudo": "Testando um novo Pensamento",
@@ -37,10 +37,16 @@
       "id": 6
     },
     {
-      "conteudo": "sss",
-      "autoria": "mmm",
+      "conteudo": "Esta é uma frase de impacto!",
+      "autoria": "mr M",
       "modelo": "modelo3",
       "id": 7
+    },
+    {
+      "conteudo": "Pensamento numero 7",
+      "autoria": "Alura",
+      "modelo": "modelo1",
+      "id": 8
     }
   ]
 }

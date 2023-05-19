@@ -1,28 +1,49 @@
 <section class="container editar-pensamentos ff-inter">
     <header class="header">
-        <h2> Adicione um <br>pensamento novo:</h2>
+        <h2> Edite o pensamento:</h2>
     </header>
-    <form>
+    <form [formGroup]="formulario">
       <label for="pensamento">Pensamento</label>
       <input
         type="textarea"
         class="input"
         id="pensamento"
-        name="pensamento"
-        placeholder="Digite o pensamento"
+        formControlName="conteudo"
+        value="{{pensamento.conteudo}}"
+        placeholder= "Digite o pensamento"
         [(ngModel)]="pensamento.conteudo"                    
       >
- 
-      <label for="autoria">Autoria ou fonte</label>
+      <div class="mensagem__erro" 
+       *ngIf="formulario.get('conteudo')?.errors?.['required'] && formulario.get('conteudo')?.touched">
+         Pensamento é obrigatório"
+      </div>
+
+       <label for="autoria">Autoria ou fonte</label>
        <input
          type="text"
          class="input"
          id="autoria"
-         name="autoria"
-         placeholder="Digite a autoria ou fonte"
+         formControlName="autoria"
+         placeholder="Digite a autoria"
+         value="{{pensamento.autoria}}"
          [(ngModel)]="pensamento.autoria"
         >
- 
+
+      <div class="mensagem__erro"
+       *ngIf="formulario.get('autoria')?.errors?.['required'] && formulario.get('autoria')?.touched">
+         Autoria é obrigatória!"
+      </div>
+
+      <div class="mensagem__erro"
+      *ngIf="formulario.get('autoria')?.errors?.['minlength'] && formulario.get('autoria')?.touched">
+        Autoria precisa ter no mínimo 3 caracteres!"
+     </div>
+
+     <div class="mensagem__erro"
+      *ngIf="formulario.get('autoria')?.errors?.['pattern'] && !formulario.get('autoria')?.errors?.['minlength'] && formulario.get('autoria')?.touched">
+        Autoria não pode ser nula!"
+     </div>
+  
      <label for="modelo"> Selecione o modelo do card: </label>
      <div class="container-radio">
        <div class="radio-modelo">
@@ -31,8 +52,9 @@
            type="radio"
            id="modelo1"
            value="modelo1"
-           name="modelo-card"
+           formControlName="modelo"
            [(ngModel)]="pensamento.modelo"
+           checked
          >
          <div class="custom-radio">
            <span></span>
@@ -46,13 +68,14 @@
           <p class="autoria"><b>{{pensamento.autoria}}</b></p>       <!-- com interpolacao               -->
        </div>
     </div>
+
     <div class="radio-modelo">
      <label for="modelo2">
      <input 
        type="radio"
        id="modelo2"
        value="modelo2"
-       name="modelo-card"
+       formControlName="modelo"
        [(ngModel)]="pensamento.modelo"
      >
      <div class="custom-radio">
@@ -73,9 +96,10 @@
      type="radio"
      id="modelo3"
      value="modelo3"
-     name="modelo-card"
+     formControlName="modelo"
      [(ngModel)]="pensamento.modelo"
    >
+   
    <div class="custom-radio">
      <span></span>
    </div>
@@ -90,8 +114,14 @@
  </div>
  
     <div class="acoes">
-     <button (click)="editarPensamento()" class="botao">Salvar</button>               <!-- Event Binding --> 
-     <button (click)="cancelar()" class="botao">Cancelar</button>
+     <button 
+     [disabled]="!formulario.valid"
+     (click)="editarPensamento()"
+     [ngClass]="habilitarBotao()"
+             class="botao">Salvar</button>               <!-- Event Binding --> 
+     
+     <button (click)="cancelar()"
+             class="botao">Cancelar</button>
  </div>
  </div>
     </form>
