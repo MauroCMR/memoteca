@@ -6823,3 +6823,7 @@ backend/node_modules/yocto-queue/index.js
 backend/node_modules/yocto-queue/license
 backend/node_modules/yocto-queue/package.json
 backend/node_modules/yocto-queue/readme.md
+node_modules/__ngcc_entry_points__.json
+node_modules/.cli-ngcc/f9476ecefa8af49d9b781812c69f6e9f4143f86f6f2bce10b411436e613d7891.lock
+.gitignore
+node_modules/__ngcc_entry_points__.json
