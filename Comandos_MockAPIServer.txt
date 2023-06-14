@@ -40,3 +40,21 @@ Alternativa correta
 </div>
 
 A vinculação de propriedades ajuda a definir o valor de uma propriedade criada dentro do componente para uma propriedade de um elemento HTML. para isso basta colocar a propriedade entre colchetes e passar como valor a propriedade do componente.
+
+
+---------------------------------------------------
+
+No componente filho, é necessário decorar a propriedade que se deseja receber os dados do componente pai com o decorator @Input. No componente pai, fazemos um property binding da propriedade decorada com a propriedade que queremos associar.
+
+
+@Input é um decorator que marca um campo de classe como uma propriedade de entrada e fornece metadados de configuração. Isso fornece a um componente filho uma maneira de se comunicar com seu componente pai, permitindo que um componente pai atualize dados no componente filho.
+
+-----------------------------------------------
+
+Acionar uma função no componente quando se deseja aplicar o comportamento de recarregar. Essa função deverá passar para a propriedade onSameUrlNavigation o valor reload: this.router.onSameUrlNavigation = 'reload' fornecer um RouteReuseStrategy que retorna ‘false’ para shouldReuseRoute, this.router.routeReuseStrategy.shouldReuseRoute = () => false e então navegar para a rota através do serviço Router e do método navigate this.router.navigate([this.router.url]).
+
+
+A classe Router é um serviço que fornece navegação entre as views e também recursos de manipulação de URL. Por padrão, o roteador reutiliza uma instância de componente quando navega novamente para o mesmo tipo de componente sem visitar um componente diferente primeiro. Para recarregar componentes roteados na mesma navegação de url, você precisa definir a propriedade onSameUrlNavigation com o valor 'reload' e fornecer um RouteReuseStrategy que retorna ‘false’ para shouldReuseRoute. Mais informações podem ser encontradas na documentação do Angular (https://angular.io/api/router/Router#onSameUrlNavigation)
+
+
+------------------------------------------------

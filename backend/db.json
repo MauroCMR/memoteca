@@ -4,54 +4,63 @@
       "id": 1,
       "conteudo": "Que bom que vc veio",
       "autoria": "Mauro",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": true
     },
     {
       "id": 2,
       "conteudo": "Estudando Angular via Alura",
       "autoria": "Mauro",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
     },
     {
       "id": 3,
       "conteudo": "Que você seja alegre mesmo quando vier a chorar. Que você seja sempre jovem, mesmo quando o tempo passar. Que você tenha esperança, mesmo quando o sol não nascer. Que você ame seus íntimos, mesmo quando sofrer frustrações. Que você jamais deixe de sonhar, mesmo quando vier a fracassar. Isso é ser feliz.  Que através deste livro você garimpe ouro dentro de si mesmo. E seja sempre apaixonado pela vida. E descubra que você é um ser humano especial.",
       "autoria": "Augusto Cury",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
     },
     {
       "id": 4,
       "conteudo": "Frase   ",
       "autoria": "xxx",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "conteudo": "Testando um novo Pensamento",
       "autoria": "Dev Mauro",
       "modelo": "modelo2",
+      "favorito": true,
       "id": 5
     },
     {
       "conteudo": "Um belo dia",
       "autoria": "meu",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 6
     },
     {
       "conteudo": "Esta é uma frase de impacto!",
       "autoria": "mr M",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 7
     },
     {
       "conteudo": "Pensamento numero 7",
       "autoria": "Alura",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 8
     },
     {
       "conteudo": "Pensamento numero 7!!!",
       "autoria": "Nay",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 9
     }
   ]

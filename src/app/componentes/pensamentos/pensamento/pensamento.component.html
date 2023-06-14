@@ -9,5 +9,9 @@
         <button class="botao-excluir" routerLink="/pensamentos/excluirPensamento/{{pensamento.id}}">
             <img src="../../../../assets/imagens/icone-excluir.png" alt="Ícone de excluir">
         </button>
+        <button class="botao-favorito" (click)="atualizarFavoritos()">
+            <img src="../../../../assets/imagens/icone-favorito-{{ mudarIconeFavorito() }}.png" alt="Icone Favorito {{ mudarIconeFavorito() }}">
+
+        </button>
     </div>
 </div>
